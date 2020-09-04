@@ -1,4 +1,4 @@
-#!/home/vagrant/src/ratings-v2/env/bin/python3.6
+#!/home/vagrant/src/labs/ratings-v2/env/bin/python3.6
 
 # -*- coding: utf-8 -*-
 import re

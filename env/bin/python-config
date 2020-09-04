@@ -1,4 +1,4 @@
-#!/home/vagrant/src/ratings-v2/env/bin/python
+#!/home/vagrant/src/labs/ratings-v2/env/bin/python
 
 import sys
 import getopt
