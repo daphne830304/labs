@@ -67,6 +67,50 @@ def register_user():
     return redirect('/')
 
 
+@app.route('/login', methods = ["POST"])
+def log_in():
+
+    email = request.form['email']
+    password = request.form['password']
+
+    
+
+    user = crud.get_user_by_email(email)
+    user_id = user.user_id
+   
+    print(email)
+    print(password)
+    print('USER PASSWORD __________________________________________________')
+    print(user.password)
+    print(user)
+    print(type(user))
+    print(user_id)
+
+
+    if password == user.password:
+        session["login"] = user_id
+        flash('login success')
+        
+    else:
+        flash('Incorrect password')
+
+    return redirect('/')
+
+
+
+
+
+
+
+
+    # if user:
+    #     flash('email exists')
+    # else:
+    #     crud.create_user(email,password)
+    #     flash('account created!')
+
+    # return redirect('/')
+
 
 
 
